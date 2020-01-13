@@ -1,12 +1,13 @@
 package Unidade2;
 
+import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
-import javax.swing.JApplet;
 
-public class AloMundo extends JApplet {
+
+public class AloMundo extends Applet {
 	/* 1) Escrever o Applet AloMundo e implementar os métodos do seu Ciclo de Vida.                        */
 	private static final long serialVersionUID = 1L;
 	

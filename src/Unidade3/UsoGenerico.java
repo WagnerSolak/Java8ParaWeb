@@ -5,11 +5,14 @@ public class UsoGenerico {
 	public static void main(String[] args) {
 		
 		//manipulando generico
-		ExemploGenerics iob = new ExemploGenerics<Integer>(88);        // criou um obj 88 do tipo inteiro
+		
+		ExemploGenerics<String> sob = new ExemploGenerics<>("Solak");
+		sob.showType();
+	
+		
+		ExemploGenerics<Integer> iob = new ExemploGenerics<>(88);
 		iob.showType(); // imprimir o tipo
 		
-		ExemploGenerics sob = new ExemploGenerics<String>("SOLAK");
-		sob.showType();
-
+		
 	}
 }
