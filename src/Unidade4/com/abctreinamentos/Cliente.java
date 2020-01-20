@@ -1,6 +1,6 @@
 package Unidade4.com.abctreinamentos;
 
-import java.io.ObjectInputStream.GetField;
+
 import java.util.HashSet;
 import java.util.Set;
 
