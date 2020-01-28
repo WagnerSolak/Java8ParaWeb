@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.function.Consumer;
 
 public class LojaVirtual {
 	
@@ -13,7 +14,13 @@ public class LojaVirtual {
 	
 	 
 	 public static void listarCursos(List<Curso>lista){
-		 lista.forEach(p->System.out.println(p.getCdcurso()+"<=>"+p.getNome()));
+		 //lambda para mostrar cursos do Antonio(ultima linha é chamado o étodo listarCurso
+		 //lista.forEach(p->System.out.println(p.getCdcurso()+"<=>"+p.getNome()));
+		 
+		 //usando referência de métodos:
+		 //lista.forEach(System.out::print);
+		 
+		 
 	 }
 	 
 	 
@@ -52,7 +59,12 @@ public class LojaVirtual {
 			pagamentos.put(antonio, cursoAntonio);
 			System.out.println(pagamentos);
 			
-			listarCursos(cursoAntonio);
+			
+		//	listarCursos(cursoAntonio);
+			
+			//Referência de método com interface funcional
+			Consumer<List<Curso>> consumer = LojaVirtual::listarCursos;
+			consumer.accept(cursoAntonio);
 		}
 	}
 
