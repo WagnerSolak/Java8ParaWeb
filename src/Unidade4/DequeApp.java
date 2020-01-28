@@ -11,6 +11,9 @@ public class DequeApp {
 		lista.add("verde");
 		lista.add("verde");
 		lista.add("amarelo");
+		lista.add("");
+		lista.add("");
+		
 
 		lista.removeFirst();
 		lista.removeLast();
