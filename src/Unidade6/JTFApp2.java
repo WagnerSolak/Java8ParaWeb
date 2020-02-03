@@ -9,27 +9,30 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class JTFApp extends JFrame implements ActionListener{
+public class JTFApp2 /*extends JFrame implements ActionListener*/{ //eventListener será associada de outra forma
 
-
-	private static final long serialVersionUID = 1L;
-
+	
+	
 	public static void main(String[] args) {
 		
-		JTFApp frame = new JTFApp();
+		JFrame frame = new JFrame();
 		frame.setTitle("Primeira Aplicação");
 		frame.setSize(350, 250);
 		Container cont = frame.getContentPane();
 		JTextField tf = new JTextField("Digite aqui...");
-		tf.addActionListener(frame);
+		
+		//tratamento usando lambda
+		tf.addActionListener(ev->{
+			JOptionPane.showMessageDialog(null, ev.getActionCommand().toString());
+		});
 		cont.add(tf, BorderLayout.NORTH);
 		frame.setVisible(true);
 	}
 
-	@Override
+	/*@Override
 	public void actionPerformed(ActionEvent evento) {
 		//mostrar o que foi selecionado
 		JOptionPane.showConfirmDialog(null, evento.getActionCommand().toString());
 		
-	}
+	}*/
 }

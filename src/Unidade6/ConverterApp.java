@@ -1,6 +1,7 @@
 package Unidade6;
 
 import java.awt.Container;
+//import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -15,6 +16,9 @@ public class ConverterApp {
 		frame.setSize(350, 250);
 		Container cont = frame.getContentPane();
 		cont.setLayout(new GridLayout(2, 2)); // 2 linhas por 2 colunas
+		
+		//cont.setLayout(new FlowLayout()); //ficaria um componente ao lado do outro
+		
 		cont.add(new JTextField("0"));
 		cont.add(new JLabel("Celsius"));
 		cont.add(new JButton("Converter"));

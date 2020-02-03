@@ -12,6 +12,8 @@ public class LojaVirtual {
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Loja Virtual");
 		frame.setSize(350, 250);
+		
+		@SuppressWarnings("unused")
 		Container cont = frame.getContentPane();
 		JMenuBar barra = new JMenuBar();
 		JMenu m1 = new JMenu("Cliente");
