@@ -10,11 +10,15 @@ import java.awt.event.WindowListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 
 @SuppressWarnings("serial")
 public class ButtonApp extends JFrame implements ActionListener,WindowListener{
 
+	//Alterando o Look and Feel(L&F) da classe
+	public UIManager.LookAndFeelInfo looks[];
+	
 	public static void main(String[] args) {
 		
 		ButtonApp frame = new ButtonApp();
@@ -27,6 +31,15 @@ public class ButtonApp extends JFrame implements ActionListener,WindowListener{
 		botao.addActionListener(frame);
 		cont.add(botao);
 		frame.addWindowListener(frame);
+		
+		//Alterando o Look and Feel(L&F) da classe
+		frame.looks = UIManager.getInstalledLookAndFeels();
+		try {
+			UIManager.setLookAndFeel(frame.looks[3].getClassName());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		frame.setVisible(true);
 	}
 
